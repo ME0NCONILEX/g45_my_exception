@@ -2,11 +2,10 @@ package se.me0nly.data_access;
 import se.me0nly.domain.Gender;
 import se.me0nly.domain.Person;
 import se.me0nly.fileIO.CSVReader_Writer;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
-
 public class NameService {
-
 
     private List<String> maleFirstNames;
     private List<String>femaleFirstNames;
@@ -59,11 +58,12 @@ public class NameService {
      * DuplicateNameException.
      * @param name
      */
-    public void addFemaleFirstName(String name){
+    public void addFemaleFirstName(String name) throws IOException {
         femaleFirstNames.add(name);
         CSVReader_Writer.saveFemaleNames(femaleFirstNames);
 
     }
+
 
     /**
      * Here you need to check if List<String> maleFirstNames already contains the name
@@ -71,10 +71,11 @@ public class NameService {
      * DuplicateNameException.
      * @param name
      */
-    public void addMaleFirstName(String name){
+    public void addMaleFirstName(String name) throws IOException {
         maleFirstNames.add(name);
         CSVReader_Writer.saveMaleNames(maleFirstNames);
     }
+
 
     /**
      * Here you need to check if List<String> lastNames already contains the name
@@ -82,9 +83,8 @@ public class NameService {
      * DuplicateNameException.
      * @param lastName
      */
-    public void addLastName(String lastName){
+    public void addLastName(String lastName) throws IOException {
         lastNames.add(lastName);
         CSVReader_Writer.saveLastNames(lastNames);
     }
 }
-
