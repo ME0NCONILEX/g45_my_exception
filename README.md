@@ -1,5 +1,5 @@
 # g45_my_exception
-Exception handling (Workshop)
+Exception handling 
 
 * 
  
