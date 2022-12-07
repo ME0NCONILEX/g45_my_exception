@@ -13,14 +13,10 @@ public class Main {
 
         List <String> lastNames = CSVReader_Writer.getLastNames();
 
-
         NameService nameService = new NameService(maleFirstNames, femaleFirstNames,lastNames);
-
 
         Person test = nameService.getNewRandomPerson();
         System.out.println(test);
-
     }
-
+    
 }
-
